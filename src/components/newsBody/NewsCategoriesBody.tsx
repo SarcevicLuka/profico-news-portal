@@ -9,6 +9,7 @@ function NewsCategoriesBody() {
 				<Categories />
 			</div>
 			<div className="news">
+				<div className="news-title">News</div>
 				<NewsBody />
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import "../assets/styles/categories.scss";
+import "../assets/styles/newsBody/categories.scss";
 import BusinessIcon from "./icons/BusinessIcon";
 import GeneralIcon from "./icons/GeneralIcon";
 import HealthIcon from "./icons/HealthIcon";

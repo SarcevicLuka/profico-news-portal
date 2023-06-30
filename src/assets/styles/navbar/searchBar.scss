@@ -6,11 +6,24 @@
 	box-shadow: 0px 1px 2px -1px #c8cad1;
 	margin-top: 20px;
 	height: 48px;
-	max-width: 725px;
 
 	& > label {
+		position: relative;
 		display: flex;
 		align-items: center;
+	}
+
+	& > label:before {
+		content: "";
+		position: absolute;
+		top: 15px;
+		bottom: 0;
+		left: 15px;
+		right: 15px;
+		width: 20px;
+		height: 20px;
+		background: url(../../svg/Search.svg) center / contain no-repeat;
+		opacity: 0.4;
 	}
 
 	& > label > button {
@@ -30,26 +43,9 @@
 		text-transform: uppercase;
 	}
 
-	& > label {
-		position: relative;
-	}
-
-	& > label:before {
-		opacity: 0.3995237946510315;
-		content: "";
-		position: absolute;
-		top: 15px;
-		bottom: 0;
-		left: 15px;
-		right: 15px;
-		width: 20px;
-		height: 20px;
-		background: url(../../svg/Search.svg) center / contain no-repeat;
-	}
-
 	& > label > input {
 		box-sizing: border-box; // Oduzima padding koji sam dodao za sirinu
-		opacity: 0.3995237946510315;
+		opacity: 0.4;
 		padding: 16px 50px 16px;
 		border: none;
 		outline: none;
@@ -78,10 +74,6 @@
 		& > label {
 			display: flex;
 			justify-content: space-between;
-		}
-
-		& > label > input {
-			width: 90%;
 		}
 	}
 }
