@@ -1,0 +1,23 @@
+@import "../../colors.scss";
+
+.news-body-container {
+	margin-top: 24px;
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+
+	.categories {
+		width: 63px;
+	}
+
+	.news {
+		border: 1px solid blue;
+		width: 100%;
+	}
+}
+
+@media (max-width: 821px) {
+	.categories {
+		display: none;
+	}
+}

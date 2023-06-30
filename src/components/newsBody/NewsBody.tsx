@@ -1,7 +1,5 @@
-import "../../assets/styles/newsBody/newsBody.scss";
-
 function NewsBody() {
-	return <div className="news-body-container">NewsBody</div>;
+	return <div>NewsBody</div>;
 }
 
 export default NewsBody;

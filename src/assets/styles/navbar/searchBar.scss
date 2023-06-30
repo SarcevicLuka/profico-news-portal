@@ -1,21 +1,21 @@
 @import "../../colors.scss";
 
 .navbar__search-bar {
-	& > label {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
 	border-radius: 10px;
 	background: #fff;
 	box-shadow: 0px 1px 2px -1px #c8cad1;
 	margin-top: 20px;
 	height: 48px;
-	width: 725px;
+	max-width: 725px;
+
+	& > label {
+		display: flex;
+		align-items: center;
+	}
 
 	& > label > button {
 		border: none;
-		width: 95px;
+		min-width: 95px;
 		height: 40px;
 		border-radius: 6px;
 		margin-right: 5px;
@@ -44,7 +44,7 @@
 		right: 15px;
 		width: 20px;
 		height: 20px;
-		background: url(../../Search.svg) center / contain no-repeat;
+		background: url(../../svg/Search.svg) center / contain no-repeat;
 	}
 
 	& > label > input {
