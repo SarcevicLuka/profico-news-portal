@@ -1,0 +1,67 @@
+@import "../colors.scss";
+
+.header-container {
+	padding: 0 175px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 60px;
+	background: linear-gradient(180deg, #bb1e1e 0%, #b21919 100%);
+}
+
+.messages {
+	&__action {
+		margin-right: 46px;
+		color: #fff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 21px;
+		letter-spacing: -0.136px;
+	}
+	&__desc {
+		color: #fff;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 21px;
+		letter-spacing: -0.119px;
+	}
+}
+
+.actions {
+	& > button {
+		border: none;
+	}
+
+	&__get {
+		width: 69px;
+		height: 40px;
+		border-radius: 8px;
+		background: #fff;
+		color: $primary-text-color;
+		text-align: center;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+	&__cancel {
+		margin-left: 24px;
+		margin-right: 25px;
+		background: none;
+		color: #fff;
+		text-align: center;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20px;
+	}
+}
+
+@media (max-width: 821px) {
+	.header-container {
+		display: none;
+	}
+}

@@ -1,0 +1,87 @@
+@import "../../colors.scss";
+
+.navbar__search-bar {
+	& > label {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0px 1px 2px -1px #c8cad1;
+	margin-top: 20px;
+	height: 48px;
+	width: 725px;
+
+	& > label > button {
+		border: none;
+		width: 95px;
+		height: 40px;
+		border-radius: 6px;
+		margin-right: 5px;
+		background: $primary-button-active-color;
+		color: #fff;
+		text-align: center;
+		font-size: 15px;
+		font-family: Inter;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+
+	& > label {
+		position: relative;
+	}
+
+	& > label:before {
+		opacity: 0.3995237946510315;
+		content: "";
+		position: absolute;
+		top: 15px;
+		bottom: 0;
+		left: 15px;
+		right: 15px;
+		width: 20px;
+		height: 20px;
+		background: url(../../Search.svg) center / contain no-repeat;
+	}
+
+	& > label > input {
+		box-sizing: border-box; // Oduzima padding koji sam dodao za sirinu
+		opacity: 0.3995237946510315;
+		padding: 16px 50px 16px;
+		border: none;
+		outline: none;
+		width: 90%;
+	}
+}
+
+@media (max-width: 821px) {
+	.navbar__search-bar {
+		& > label > button {
+			display: none;
+		}
+
+		& > label:before {
+			width: 16px;
+			height: 16px;
+		}
+	}
+}
+
+.nav.active {
+	.navbar__search-bar {
+		margin: 64px 16px 0px 16px;
+		width: calc(100% - 32px);
+
+		& > label {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		& > label > input {
+			width: 90%;
+		}
+	}
+}

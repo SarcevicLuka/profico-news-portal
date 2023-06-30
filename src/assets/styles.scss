@@ -1,13 +1,11 @@
 body,
 html {
 	margin: 0;
+	background-color: #f4f5f8;
 }
 
-:root {
-	font-family: "Inter", sans-serif;
-}
 @supports (font-variation-settings: normal) {
 	:root {
-		font-family: "Inter var", sans-serif;
+		font-family: "Inter var";
 	}
 }
