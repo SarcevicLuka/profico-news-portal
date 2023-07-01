@@ -1,22 +1,10 @@
 body,
 html,
 p {
-	/* width */
-	&::-webkit-scrollbar {
-		width: 4px;
+	::-webkit-scrollbar {
+		width: 0px;
 	}
 
-	/* Track */
-	&::-webkit-scrollbar-track {
-		color: white;
-		border: none;
-	}
-
-	/* Handle */
-	&::-webkit-scrollbar-thumb {
-		border-radius: 2px;
-		background: rgba(0, 0, 0, 0.24);
-	}
 	margin: 0;
 	background-color: #f4f5f8;
 }

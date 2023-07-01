@@ -23,19 +23,19 @@
 
 		/* width */
 		&::-webkit-scrollbar {
-			width: 4px;
+			width: 4px !important;
 		}
 
 		/* Track */
 		&::-webkit-scrollbar-track {
-			color: white;
-			border: none;
+			color: white !important;
+			border: none !important;
 		}
 
 		/* Handle */
 		&::-webkit-scrollbar-thumb {
-			border-radius: 2px;
-			background: rgba(0, 0, 0, 0.24);
+			border-radius: 2px !important;
+			background: rgba(0, 0, 0, 0.24) !important;
 		}
 	}
 
