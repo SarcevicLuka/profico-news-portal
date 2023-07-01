@@ -1,17 +1,30 @@
+import { Link } from "react-router-dom";
 import "../../assets/styles/newsBody/newsCard.scss";
+import { AvailableRoutes } from "../../routes/AvailableRoutes";
 
 function NewsCard() {
 	return (
-		<div className="card-container">
-			<div className="card-image">
-				<img src="../../assets/svg/placeholder.png" alt="Placeholder" />
+		<Link to={AvailableRoutes.Latest}>
+			<div className="newsCard-container">
+				<div className="card-image">
+					<img
+						src="/src/assets/svg/placeholder.png"
+						alt="Placeholder"
+					/>
+				</div>
+				<div className="card-info">
+					<div className="category-title">
+						<div className="category">Tech</div>
+						<div className="title">
+							Some titleSome titleSome titleSome titleSome
+							titleSome titleSome titleSome titleSome titleSome
+							titleSome titleSome titleSome titleSome title
+						</div>
+					</div>
+					<div className="card-info__author">Author Me</div>
+				</div>
 			</div>
-			<div className="card-info">
-				<div className="category"></div>
-				<div className="title"></div>
-				<div className="author"></div>
-			</div>
-		</div>
+		</Link>
 	);
 }
 

@@ -1,5 +1,5 @@
 import "../../assets/styles/newsBody/newsCategoriesBody.scss";
-import Categories from "../Categories";
+import Categories from "../navigation/Categories";
 import NewsBody from "./NewsBody";
 
 function NewsCategoriesBody() {

@@ -1,6 +1,9 @@
 body,
 html,
 p {
+	::-webkit-scrollbar {
+		display: none;
+	}
 	margin: 0;
 	background-color: #f4f5f8;
 }
