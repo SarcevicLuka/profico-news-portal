@@ -33,7 +33,7 @@
 	}
 }
 
-@media (min-width: 821px) {
+@media (min-width: 767px) {
 	.screen-toggle {
 		display: flex;
 		flex-direction: row;
@@ -50,15 +50,11 @@
 			font-size: 32px;
 		}
 	}
-
-	.navbar,
-	.navbar__inner {
-		overflow: hidden;
-	}
 }
 
 // Active hamb
 .navbar .nav.active {
+	overflow: hidden;
 	top: 0;
 
 	.navbar__active {
@@ -106,7 +102,7 @@
 	transition: all 0.6s;
 }
 
-@media (min-width: 821px) {
+@media (min-width: 767px) {
 	.navbar_inner {
 		display: flex;
 		align-items: center;
@@ -126,7 +122,7 @@ hr {
 	opacity: 0.1;
 }
 
-@media (max-width: 821px) {
+@media (max-width: 767px) {
 	hr {
 		display: none;
 	}
