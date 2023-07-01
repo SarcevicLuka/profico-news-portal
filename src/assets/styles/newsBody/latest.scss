@@ -56,3 +56,10 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.grid-container {
+		margin-top: 16px;
+		gap: 0px !important;
+	}
+}

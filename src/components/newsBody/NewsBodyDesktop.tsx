@@ -1,13 +1,14 @@
-import "../../assets/styles/newsBody/latestNews.scss";
+import "../../assets/styles/newsBody/newsBodyDeskTopMobile.scss";
 import NewsCard from "../newsCards/NewsCard";
 import Latest from "./Latest";
 
-function LatestNews() {
+function NewsBodyDesktop() {
 	return (
 		<div className="grid-container">
 			<div className="grid-item latest">
 				<Latest />
 			</div>
+
 			<div className="grid-item">
 				<NewsCard />
 			</div>
@@ -24,4 +25,4 @@ function LatestNews() {
 	);
 }
 
-export default LatestNews;
+export default NewsBodyDesktop;
