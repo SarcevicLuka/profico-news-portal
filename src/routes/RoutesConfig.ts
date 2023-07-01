@@ -2,6 +2,7 @@ import BusinessPage from "../pages/BusinessPage";
 import GeneralPage from "../pages/GeneralPage";
 import HealthPage from "../pages/HealthPage";
 import HomePage from "../pages/HomePage";
+import LatestPage from "../pages/LatestPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import SciencePage from "../pages/SciencePage";
 import SportsPage from "../pages/SportsPage";
@@ -41,6 +42,10 @@ const RouteConfiguration: RouteInformation[] = [
 	{
 		path: AvailableRoutes.Technology,
 		component: TechPage
+	},
+	{
+		path: AvailableRoutes.Latest,
+		component: LatestPage
 	},
 	{ path: "*", component: NotFoundPage }
 ];
