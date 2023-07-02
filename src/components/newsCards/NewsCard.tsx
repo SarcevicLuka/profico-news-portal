@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import "../../assets/styles/newsBody/newsCard.scss";
-import { AvailableRoutes } from "../../routes/AvailableRoutes";
+import { Article } from "../../types/types";
 
-function NewsCard() {
+interface NewsCardProps {
+	article: Article;
+}
+
+function NewsCard({ article }: NewsCardProps) {
 	return (
-		<Link to={AvailableRoutes.Latest}>
+		<Link to={article.url}>
 			<div className="newsCard-container">
 				<div className="card-image">
 					<img
@@ -14,14 +18,12 @@ function NewsCard() {
 				</div>
 				<div className="card-info">
 					<div className="category-title">
-						<div className="category">Tech</div>
-						<div className="title">
-							Some titleSome titleSome titleSome titleSome
-							titleSome titleSome titleSome titleSome titleSome
-							titleSome titleSome titleSome titleSome title
-						</div>
+						<div className="category">{article.category}</div>
+						<div className="title">{article.title}</div>
 					</div>
-					<div className="card-info__author">Author Me</div>
+					<div className="card-info__author">
+						{article.author ? article.author : "No author"}
+					</div>
 				</div>
 			</div>
 		</Link>

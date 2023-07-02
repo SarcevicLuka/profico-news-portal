@@ -70,3 +70,9 @@ a {
 		letter-spacing: -0.068px;
 	}
 }
+
+@media (max-width: 767px) {
+	.newsCard-container {
+		margin-top: 16px;
+	}
+}

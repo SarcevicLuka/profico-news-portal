@@ -1,5 +1,14 @@
-function BusinessPage() {
-	return <div>BusinessPage</div>;
+import NewsCategoriesBody from "../components/newsBody/NewsCategoriesBody";
+import DefaultLayout from "../layouts/default";
+
+function BusinesslPage() {
+	return (
+		<>
+			<DefaultLayout>
+				<NewsCategoriesBody />
+			</DefaultLayout>
+		</>
+	);
 }
 
-export default BusinessPage;
+export default BusinesslPage;

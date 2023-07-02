@@ -4,13 +4,14 @@ import NewsBodyDesktop from "./NewsBodyDesktop";
 import NewsBodyMobile from "./NewsBodyMobile";
 
 function NewsBody() {
-	const [isMobile, setIsMobile] = useState(false);
+	const [isMobile, setIsMobile] = useState<boolean>(false);
+
+	const checkIsMobile = () => {
+		setIsMobile(window.innerWidth <= 767);
+	};
 
 	useEffect(() => {
-		const checkIsMobile = () => {
-			setIsMobile(window.innerWidth <= 768);
-		};
-
+		console.log("Use Effect from NewsCategoriesBody");
 		window.addEventListener("resize", checkIsMobile);
 		checkIsMobile(); // Initial check
 
