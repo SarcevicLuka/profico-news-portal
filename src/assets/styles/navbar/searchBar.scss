@@ -1,6 +1,7 @@
 @import "../../colors.scss";
 
 .navbar__search-bar {
+	width: 750px;
 	border-radius: 10px;
 	background: #fff;
 	box-shadow: 0px 1px 2px -1px $box-shadow;
@@ -9,7 +10,9 @@
 }
 
 .search-bar__form {
+	width: 100%;
 	&__label {
+		width: 100%;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -57,6 +60,10 @@
 }
 
 @media (max-width: 767px) {
+	.navbar__search-bar {
+		width: 100%;
+	}
+
 	.search-bar__form {
 		&__submit {
 			display: none;

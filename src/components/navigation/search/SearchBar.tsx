@@ -19,7 +19,8 @@ function SearchBar({ setSearchResults }: NavBarProps) {
 						author: data.byline.original?.substring(3),
 						//image: articleData.
 						url: data.url,
-						apiId: data._id
+						apiId: data._id,
+						isFavorite: false
 					};
 
 					setSearchResults((current) => [...current, article]);
