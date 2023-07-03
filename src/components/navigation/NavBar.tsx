@@ -47,7 +47,7 @@ function NavBar() {
 				</div>
 			</div>
 
-			<hr />
+			<hr id="navbar-line" />
 		</>
 	);
 }

@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom";
 import "../../assets/styles/newsBody/latestNewsCard.scss";
+import { LatestArticle } from "../../types/types";
 
-function LatestNewsCard() {
+interface LatestNewsCardProps {
+	latestArticle: LatestArticle;
+}
+
+function LatestNewsCard({ latestArticle }: LatestNewsCardProps) {
+	//console.log(latestArticle);
 	return (
 		<div className="card-container">
-			<div className="time">12:30</div>
+			<div className="time">{latestArticle.publishedAt}</div>
 			<div className="title">
-				<Link to={"/"}>
-					JHF OIDJF sdoijfsjfodsjfds fsdijf sd JHF OIDJF
-					sdoijfsjfodsjfds fsdijf sd JHF OIDJF sdoijfsjfodsjfds fsdijf
-					sd JHF OIDJF sdoijfsjfodsjfds fsdijf sd
-				</Link>
+				<Link to={"/"}>{latestArticle.title}</Link>
 			</div>
-			<hr />
+			<hr id="latest-news-divider" />
 		</div>
 	);
 }

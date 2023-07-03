@@ -5,8 +5,8 @@ const baseURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 const apiKey = "HUamtrrPIz1WG5A5aFUzYqK69kRvXjL8";
 
 const getArticles = async (filterParams: URLSearchParams) => {
-	console.info("Api called");
-	return axios.get(
+	console.log("Api called");
+	return await axios.get(
 		`${baseURL}?${filterParams}&${QueryParameters.ApiKey}=${apiKey}`
 	);
 };

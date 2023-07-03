@@ -18,8 +18,12 @@ function NewsCard({ article }: NewsCardProps) {
 				</div>
 				<div className="card-info">
 					<div className="category-title">
-						<div className="category">{article.category}</div>
-						<div className="title">{article.title}</div>
+						<div className="category">
+							{article.category ? article.category : "SPORTS"}
+						</div>
+						<div className="title">
+							{article.title ? article.title : "Some title"}
+						</div>
 					</div>
 					<div className="card-info__author">
 						{article.author ? article.author : "No author"}
