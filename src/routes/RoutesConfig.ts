@@ -1,4 +1,5 @@
 import BusinessPage from "../pages/BusinessPage";
+import FavoritesPage from "../pages/FavoritesPage";
 import GeneralPage from "../pages/GeneralPage";
 import HealthPage from "../pages/HealthPage";
 import HomePage from "../pages/HomePage";
@@ -46,6 +47,10 @@ const RouteConfiguration: RouteInformation[] = [
 	{
 		path: AvailableRoutes.Latest,
 		component: LatestPage
+	},
+	{
+		path: AvailableRoutes.Favorites,
+		component: FavoritesPage
 	},
 	{ path: "*", component: NotFoundPage }
 ];

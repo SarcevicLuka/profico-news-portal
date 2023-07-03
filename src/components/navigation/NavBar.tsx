@@ -7,7 +7,7 @@ import Categories from "./Categories";
 import { Article } from "../../types/types";
 
 export interface NavBarProps {
-	setSearchResults: React.Dispatch<React.SetStateAction<Article[]>>;
+	setSearchResults?: React.Dispatch<React.SetStateAction<Article[]>>;
 }
 
 function NavBar({ setSearchResults }: NavBarProps) {

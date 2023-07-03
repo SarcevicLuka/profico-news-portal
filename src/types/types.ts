@@ -5,6 +5,7 @@ export type Article = {
 	//image: string;
 	url: string;
 	apiId: string;
+	isFavorite: boolean;
 };
 
 export type LatestArticle = {

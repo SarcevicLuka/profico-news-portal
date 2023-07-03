@@ -6,5 +6,6 @@ export enum AvailableRoutes {
 	Science = "/science",
 	Sports = "/sports",
 	Technology = "/technology",
-	Latest = "/latest"
+	Latest = "/latest",
+	Favorites = "/favorites"
 }

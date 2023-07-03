@@ -8,6 +8,7 @@ import ScienceIcon from "../icons/ScienceIcon";
 import SportsIcon from "../icons/SportsIcon";
 import TechIcon from "../icons/TechIcon";
 import { AvailableRoutes } from "../../routes/AvailableRoutes";
+import StarIcon from "../icons/StarIcon";
 
 function Categories() {
 	const location = useLocation();
@@ -95,6 +96,18 @@ function Categories() {
 				>
 					<TechIcon />
 					<div>Tech</div>
+				</div>
+			</Link>
+			<Link to={AvailableRoutes.Favorites}>
+				<div
+					className={
+						path === "/favorites"
+							? "category-item active"
+							: "category-item"
+					}
+				>
+					<StarIcon />
+					<div>Favorites</div>
 				</div>
 			</Link>
 		</div>
