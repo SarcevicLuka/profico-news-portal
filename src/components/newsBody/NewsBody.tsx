@@ -35,9 +35,11 @@ function NewsBody({ searchResults }: NewsBodyProps) {
 				CategoryQueriesByPage.General
 			);
 		} else {
-			filterParams.append(QueryParameters.FilterQuery, path);
+			const queryParam = `news_desk:("${path}")`;
+			filterParams.append(QueryParameters.FilterQuery, queryParam);
 		}
 		filterParams.append(QueryParameters.Page, page.toString());
+		filterParams.append(QueryParameters.Sort, "relevance");
 
 		getArticles(filterParams)
 			.then((response) => {
