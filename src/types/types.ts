@@ -1,9 +1,3 @@
-import { ReactNode } from "react";
-
-export type ChildrenProps = {
-	readonly children: ReactNode;
-};
-
 export type Article = {
 	title: string;
 	category: string;

@@ -1,15 +1,15 @@
 import NavBar from "../components/navigation/NavBar";
 import Header from "../components/Header";
-import { ChildrenProps } from "../types/types";
 import "../assets/styles/layout.scss";
+import NewsCategoriesBody from "../components/newsBody/NewsCategoriesBody";
 
-function DefaultLayout({ children }: ChildrenProps) {
+function DefaultLayout() {
 	return (
 		<div>
 			<Header />
 			<div className="layout">
 				<NavBar />
-				<div>{children}</div>
+				<NewsCategoriesBody />
 			</div>
 		</div>
 	);
