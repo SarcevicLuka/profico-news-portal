@@ -60,6 +60,21 @@
 	}
 }
 
+@media (max-width: 1200px) {
+	.messages {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 900px) {
+	.header-container {
+		padding: 10px 175px;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
 @media (max-width: 767px) {
 	.header-container {
 		display: none;
