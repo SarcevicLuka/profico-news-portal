@@ -7,7 +7,13 @@ import { Article } from "../../types/types";
 import { CategoryQueriesByPage, QueryParameters } from "../../types/enums";
 import { getArticles } from "../../api/articles/apiCalls";
 
-function NewsBody() {
+interface NewsBodyProps {
+	searchResults: Article[];
+}
+
+function NewsBody({ searchResults }: NewsBodyProps) {
+	console.log(searchResults);
+
 	const location = useLocation();
 	const path = location.pathname.substring(1);
 
@@ -83,12 +89,14 @@ function NewsBody() {
 						articles={articles}
 						setPage={setPage}
 						handleArticles={handleArticles}
+						searchResults={searchResults}
 					/>
 				) : (
 					<NewsBodyDesktop
 						articles={articles}
 						setPage={setPage}
 						handleArticles={handleArticles}
+						searchResults={searchResults}
 					/>
 				)}
 			</div>

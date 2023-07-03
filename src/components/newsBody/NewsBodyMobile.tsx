@@ -8,12 +8,14 @@ import { Article } from "../../types/types";
 
 export interface NewsBodyMobileDesktopProps {
 	articles: Article[];
+	searchResults: Article[];
 	setPage: React.Dispatch<React.SetStateAction<number>>;
 	handleArticles: () => Promise<void>;
 }
 
 function NewsBodyMobile({
 	articles,
+	searchResults,
 	setPage,
 	handleArticles
 }: NewsBodyMobileDesktopProps) {
@@ -63,16 +65,29 @@ function NewsBodyMobile({
 							loader={<p>Loading...</p>}
 							dataLength={articles.length}
 						>
-							{articles?.map((article) => {
-								return (
-									<div className="grid-item">
-										<NewsCard
-											key={article.apiId}
-											article={article}
-										/>
-									</div>
-								);
-							})}
+							{searchResults.length > 0
+								? searchResults?.map((article) => {
+										return (
+											<div className="grid-item">
+												<NewsCard
+													key={article.apiId}
+													article={article}
+												/>
+											</div>
+										);
+										// eslint-disable-next-line no-mixed-spaces-and-tabs
+								  })
+								: articles?.map((article) => {
+										return (
+											<div className="grid-item">
+												<NewsCard
+													key={article.apiId}
+													article={article}
+												/>
+											</div>
+										);
+										// eslint-disable-next-line no-mixed-spaces-and-tabs
+								  })}
 						</InfiniteScroll>
 					</>
 				)}

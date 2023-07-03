@@ -4,8 +4,13 @@ import { useState } from "react";
 import SearchBar from "./search/SearchBar";
 import ExitIcon from "../icons/ExitIcon";
 import Categories from "./Categories";
+import { Article } from "../../types/types";
 
-function NavBar() {
+export interface NavBarProps {
+	setSearchResults: React.Dispatch<React.SetStateAction<Article[]>>;
+}
+
+function NavBar({ setSearchResults }: NavBarProps) {
 	const [isNavFullscreen, setIsNavFullscreen] = useState<boolean>(false);
 
 	return (
@@ -24,7 +29,7 @@ function NavBar() {
 							<HamburgerIcon />
 						</button>
 					</div>
-					<SearchBar />
+					<SearchBar setSearchResults={setSearchResults} />
 				</div>
 
 				<div className={isNavFullscreen ? "nav active" : "nav"}>
@@ -39,7 +44,7 @@ function NavBar() {
 						>
 							<ExitIcon />
 						</button>
-						<SearchBar />
+						<SearchBar setSearchResults={setSearchResults} />
 						<div className="navbar__active-categories">
 							<Categories />
 						</div>

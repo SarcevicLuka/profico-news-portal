@@ -6,14 +6,16 @@
 	box-shadow: 0px 1px 2px -1px $box-shadow;
 	margin-top: 20px;
 	height: 48px;
+}
 
-	& > label {
+.search-bar__form {
+	&__label {
 		position: relative;
 		display: flex;
 		align-items: center;
 	}
 
-	& > label:before {
+	&__label:before {
 		content: "";
 		position: absolute;
 		top: 15px;
@@ -26,7 +28,7 @@
 		opacity: 0.4;
 	}
 
-	& > label > button {
+	&__submit {
 		cursor: pointer;
 		border: none;
 		min-width: 95px;
@@ -44,7 +46,7 @@
 		text-transform: uppercase;
 	}
 
-	& > label > input {
+	&__input {
 		box-sizing: border-box; // Oduzima padding koji sam dodao za sirinu
 		opacity: 0.4;
 		padding: 16px 50px 16px;
@@ -55,12 +57,12 @@
 }
 
 @media (max-width: 767px) {
-	.navbar__search-bar {
-		& > label > button {
+	.search-bar__form {
+		&__submit {
 			display: none;
 		}
 
-		& > label:before {
+		&__label:before {
 			width: 16px;
 			height: 16px;
 		}
@@ -71,10 +73,10 @@
 	.navbar__search-bar {
 		margin: 64px 16px 0px 16px;
 		width: calc(100% - 32px);
+	}
 
-		& > label {
-			display: flex;
-			justify-content: space-between;
-		}
+	.search-bar__form__input {
+		display: flex;
+		justify-content: space-between;
 	}
 }

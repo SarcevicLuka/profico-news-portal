@@ -7,6 +7,8 @@ interface NewsCardProps {
 }
 
 function NewsCard({ article }: NewsCardProps) {
+	//console.log(article);
+
 	return (
 		<Link to={article.url}>
 			<div className="newsCard-container">

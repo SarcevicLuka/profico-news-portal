@@ -11,4 +11,11 @@ const getArticles = async (filterParams: URLSearchParams) => {
 	);
 };
 
-export { getArticles };
+const searchArticles = async (searchTerm: string) => {
+	console.log("Search called");
+	return await axios.get(
+		`${baseURL}?q=${searchTerm}&${QueryParameters.ApiKey}=${apiKey}`
+	);
+};
+
+export { getArticles, searchArticles };

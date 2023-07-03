@@ -6,9 +6,13 @@ import { NewsBodyMobileDesktopProps } from "./NewsBodyMobile";
 
 function NewsBodyDesktop({
 	articles,
+	searchResults,
 	setPage,
 	handleArticles
 }: NewsBodyMobileDesktopProps) {
+	console.log(articles);
+	console.log(searchResults);
+
 	return (
 		<>
 			<InfiniteScroll
@@ -25,17 +29,29 @@ function NewsBodyDesktop({
 					<div className="grid-item latest">
 						<Latest />
 					</div>
-
-					{articles?.map((article) => {
-						return (
-							<div className="grid-item">
-								<NewsCard
-									key={article.apiId}
-									article={article}
-								/>
-							</div>
-						);
-					})}
+					{searchResults.length > 0
+						? searchResults?.map((article) => {
+								return (
+									<div className="grid-item">
+										<NewsCard
+											key={article.apiId}
+											article={article}
+										/>
+									</div>
+								);
+								// eslint-disable-next-line no-mixed-spaces-and-tabs
+						  })
+						: articles?.map((article) => {
+								return (
+									<div className="grid-item">
+										<NewsCard
+											key={article.apiId}
+											article={article}
+										/>
+									</div>
+								);
+								// eslint-disable-next-line no-mixed-spaces-and-tabs
+						  })}
 				</div>
 			</InfiniteScroll>
 		</>
